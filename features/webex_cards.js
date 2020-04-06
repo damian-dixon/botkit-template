@@ -19,44 +19,59 @@ module.exports = function(controller) {
                     'contentType': 'application/vnd.microsoft.card.adaptive',
                     'content': {
                         'type': 'AdaptiveCard',
-    'version': '1.0',
-    'body': [
-        {
-            'type': 'TextBlock',
-            'text': 'Transurban WFH Survey',
-            'size': 'ExtraLarge',
-            'weight': 'Bolder'
-        },
-        {
-            'type': 'TextBlock',
-            'text': 'We'd like to know how you're doing working from home. Please complete this short survey to let us know if you need anything.',
-            'wrap': true
-        },
-        {
-            'type': 'TextBlock',
-            'text': 'Question 1',
-            'size': 'Medium'
-        },
-        {
-            'type': 'TextBlock',
-            'text': 'Are you able to perform all of your work requirements from home?'
-        },
-        {
-            'type': 'Input.ChoiceSet',
-            'placeholder': 'Placeholder text',
-            'choices': [
-                {
-                    'title': 'Yes',
-                    'value': 'Yes'
-                },
-                {
-                    'title': 'No',
-                    'value': 'No'
-                }
-            ],
-            'style': 'expanded'
-        }
-    ],
+                        'version': '1.0',
+                        'body': [
+                            {
+                                'type': 'ColumnSet',
+                                'columns': [
+                                    {
+                                        'type': 'Column',
+                                        'width': 'stretch',
+                                        'items': [
+                                            {
+                                                'type': 'TextBlock',
+                                                'text': 'VM Monitor',
+                                                'size': 'ExtraLarge',
+                                                'weight': 'Bolder',
+                                                'horizontalAlignment': 'Center'
+                                            }
+                                        ],
+                                        'verticalContentAlignment': 'Center'
+                                    },
+                                    {
+                                        'type': 'Column',
+                                        'width': 'stretch',
+                                        'items': [
+                                            {
+                                                'type': 'Image',
+                                                'altText': '',
+                                                'url': `${controller.public_url}/www/monitor.png`
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                'type': 'Input.ChoiceSet',
+                                'placeholder': 'Placeholder text',
+                                'choices': [
+                                    {
+                                        'title': 'CUCM Pub',
+                                        'value': '10.10.0.1'
+                                    },
+                                    {
+                                        'title': 'CUCM Sub',
+                                        'value': '10.10.0.2'
+                                    },
+                                    {
+                                        'title': 'IM&P',
+                                        'value': '10.10.0.3'
+                                    }
+                                ],
+                                'value': '10.10.0.1',
+                                'id': 'vmlist'
+                            }
+                        ],
                         '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json',
                         'actions': [
                             {
