@@ -18,43 +18,43 @@ module.exports = function(controller) {
                 {
                     'contentType': 'application/vnd.microsoft.card.adaptive',
                     'content': {
-                        "type": "AdaptiveCard",
-    "version": "1.0",
-    "body": [
+                        'type': 'AdaptiveCard',
+    'version': '1.0',
+    'body': [
         {
-            "type": "TextBlock",
-            "text": "Transurban WFH Survey",
-            "size": "ExtraLarge",
-            "weight": "Bolder"
+            'type': 'TextBlock',
+            'text': 'Transurban WFH Survey',
+            'size': 'ExtraLarge',
+            'weight': 'Bolder'
         },
         {
-            "type": "TextBlock",
-            "text": "We'd like to know how you're doing working from home. Please complete this short survey to let us know if you need anything.",
-            "wrap": true
+            'type': 'TextBlock',
+            'text': 'We'd like to know how you're doing working from home. Please complete this short survey to let us know if you need anything.',
+            'wrap': true
         },
         {
-            "type": "TextBlock",
-            "text": "Question 1",
-            "size": "Medium"
+            'type': 'TextBlock',
+            'text': 'Question 1',
+            'size': 'Medium'
         },
         {
-            "type": "TextBlock",
-            "text": "Are you able to perform all of your work requirements from home?"
+            'type': 'TextBlock',
+            'text': 'Are you able to perform all of your work requirements from home?'
         },
         {
-            "type": "Input.ChoiceSet",
-            "placeholder": "Placeholder text",
-            "choices": [
+            'type': 'Input.ChoiceSet',
+            'placeholder': 'Placeholder text',
+            'choices': [
                 {
-                    "title": "Yes",
-                    "value": "Yes"
+                    'title': 'Yes',
+                    'value': 'Yes'
                 },
                 {
-                    "title": "No",
-                    "value": "No"
+                    'title': 'No',
+                    'value': 'No'
                 }
             ],
-            "style": "expanded"
+            'style': 'expanded'
         }
     ],
                         '$schema': 'http://adaptivecards.io/schemas/adaptive-card.json',
